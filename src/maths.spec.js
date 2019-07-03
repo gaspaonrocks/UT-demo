@@ -1,11 +1,11 @@
 const assert = require('assert');
 
-const math = require('./maths');
+const maths = require('./maths');
 
 describe('maths module', () => {
     describe('healthCheck function', () => {
         it('should say hello to anyone', () => {
-            const actual = math.healthCheck(),
+            const actual = maths.healthCheck(),
                 expected = 'Hello stranger !';
 
             assert.equal(actual, expected);
