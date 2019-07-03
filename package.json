@@ -1,0 +1,45 @@
+{
+  "name": "ut-demo",
+  "version": "1.0.0",
+  "description": "live coding session on unit testing",
+  "main": "./src/index.js",
+  "scripts": {
+    "coverage": "./node_modules/.bin/nyc --reporter=lcov --reporter=text-summary npm run test",
+    "test": "./node_modules/.bin/mocha ./src/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaspaonrocks/UT-demo.git"
+  },
+  "author": "gaspaonrocks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gaspaonrocks/UT-demo/issues"
+  },
+  "homepage": "https://github.com/gaspaonrocks/UT-demo#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.4",
+    "istanbul": "^0.4.5",
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.1"
+  },
+  "nyc": {
+    "all": true,
+    "include": [
+      "src/**/*.js"
+    ],
+    "exclude": [
+      "**/*.spec.js"
+    ],
+    "extension": [
+      ".js"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "sourceMap": true,
+    "instrument": true
+  }
+}
