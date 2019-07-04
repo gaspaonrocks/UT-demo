@@ -1,3 +1,4 @@
 module.exports = {
-    healthCheck: (name = 'stranger') => `Hello ${name} !`
+    healthCheck: (name = 'stranger') => `Hello ${name} !`,
+    throwError: () => { throw new Error('error'); }
 }

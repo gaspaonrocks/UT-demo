@@ -11,4 +11,13 @@ describe('maths module', () => {
             assert.equal(actual, expected);
         });
     });
+
+    describe('throwError function', () => {
+        it('should throw', () => {
+            const actual = () => maths.throwError(),
+                expected = new Error('error');
+
+            assert.throws(actual, expected);
+        });
+    });
 });
